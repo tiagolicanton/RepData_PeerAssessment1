@@ -101,9 +101,9 @@ plot(steps~interval,data=df_interval,type=&quot;l&quot;)</code></pre>
 <li>Calculate and report the total number of missing values in the dataset</li>
 </ul>
 <pre class="r"><code>num_of_NAs &lt;- sum(is.na(df_raw$steps))</code></pre>
-<p>The total number of missing values is <strong><code>2304</code></strong></p>
+<p>The total number of missing values is <strong><code>2304</code></strong>.</p>
 <ul>
-<li>Create a new dataset <code>df_fill</code> and fill in missing <code>NA</code>s</li>
+<li>Create a new dataset <code>df_fill</code> and fill in missing <code>NA</code>s. The average steps of the corresponding interval is used to replace the missing value.</li>
 </ul>
 <pre class="r"><code>df_fill &lt;- df_raw
 for (i in 1:nrow(df_fill)){

@@ -66,9 +66,10 @@ On average across all the days in the dataset, the interval that contains the ma
 num_of_NAs <- sum(is.na(df_raw$steps))
 ```
 
-The total number of missing values is **`2304`**
+The total number of missing values is **`2304`**.
 
-- Create a new dataset `df_fill` and fill in missing `NA`s
+- Create a new dataset `df_fill` and fill in missing `NA`s.  The average steps of the corresponding interval is used to replace the missing value.
+
 
 ```r
 df_fill <- df_raw
